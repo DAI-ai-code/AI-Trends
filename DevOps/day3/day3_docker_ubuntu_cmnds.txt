@@ -1,0 +1,27 @@
+$ sudo apt update -y 
+-----------------FOR INSTALLING AND RUNNING A SERVICE-------------------
+
+$ sudo apt install docker.io 
+
+$ sudo systemctl start docker
+
+$ sudo systemctl status docker
+
+$ sudo systemctl enable docker #automatic start the service(docker)
+
+------------------------------------DOCKER---------------------------------
+
+$ docker ps -> Displays running containers
+
+$ docker ps -a -> Displays running and exited (stopped) containers
+
+$ docker images -> Displays container images in local docker repository
+
+$ docker pull image-name -> Pull the specified container image from the docker hub  repository
+
+$ docker run -> Creates a new container using specified container image (create a container execute app in image)
+
+---------------------------------------------------------------------------
+we don't have permission so we update the user 
+$ sudo usermod -aG docker <username>
+
