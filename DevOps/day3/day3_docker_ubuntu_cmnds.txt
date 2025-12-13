@@ -31,13 +31,55 @@ $ docker start u1
 
 $ docker attach u1 -> to start a running container, only works with container designed to start shell, can run multiple at a time
 
+$ docker exec u1 ls -> 
+
+$ docker exec u1 mkdir new1 - > in u1 container make a directory named new1
+
+$ docker stop u1 -> stop u1 container
+
+$ docker exec -h -> help for docker exec command
+
+$ docker commit ub1 python3 # create image python3 from ub1 container
+ 
+$ docker run --name py1 -ti python3 /bin/python3 # run python3 directly from python3 image
+
+$ docker run --rm --name py1 -ti python3 /bin/python3 # start the container and delete automatically after execution
+
+$ docker pull httpd ->
+
+$ docker run --name <container_name> httpd
+
+$ docker run --name <container_name> -d httpd -> container ko detached/daemon mode open krega. runs in background. we can 
+
+$ docker inspect <containername>
+
+$ docker run --name >container_name> -p 8000:80 -d httpd -> 8000 will be local host address. if we dont use this then we get a random one.
+
+$ docker cp <input_dir_filename> <container name>:<path> 
+eg: $ docker cp index.html web1:/usr/local/apache2/htdocs/ -> path is generally same
+
+$ docker run --name web3 -d -p 9000:80 -v /webdata/:/usr/local/apache2/htdocs/ httpd -> links local dir /webdata/ to the htdocs container directory.
+
+$ docker run --name ng1 -p 7500:80 -v /exam-data/:/usr/share/nginx/html/ -d nginx -> exam date is directory name
+we don't have permission so we update the user 
+$ sudo usermod -aG docker <username>
+
+
 -------------------------------CONTAINER-----------------------------------
-# apt update -y
+$ apt update -y
 
-# touch ml1 -> makes a blank file inside the directory
+$ touch ml1 -> makes a blank file inside the directory
 
-# exit -> closing the shell
+$ exit -> closing the shell
+
+$ apt install python3 -y -> install python3
+
+$ apt install python3-pip -y -> install pip
+
 ---------------------------------------------------------------------------
 we don't have permission so we update the user 
 $ sudo usermod -aG docker <username>
 
+$ sudo init 6 # restart
+
+$ sudo init 0 # shut down

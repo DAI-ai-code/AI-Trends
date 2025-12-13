@@ -6,3 +6,13 @@
 6. restart them
 7. run on multiple terminal to see parallel running of containers
 8.
+
+1. make dir in u1 using exec command
+2. Stop container
+3. delete container(s)
+
+
+1. install python in container
+2. create image from it
+
+
