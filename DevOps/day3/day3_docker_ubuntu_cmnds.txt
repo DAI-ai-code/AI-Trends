@@ -21,6 +21,22 @@ $ docker pull image-name -> Pull the specified container image from the docker h
 
 $ docker run -> Creates a new container using specified container image (create a container execute app in image)
 
+$ docker run <name>
+
+$ docker rm <container id>
+
+$ docker run --name u1 -ti ubuntu -> once you run it yo would be inside this container
+
+$ docker start u1
+
+$ docker attach u1 -> to start a running container, only works with container designed to start shell, can run multiple at a time
+
+-------------------------------CONTAINER-----------------------------------
+# apt update -y
+
+# touch ml1 -> makes a blank file inside the directory
+
+# exit -> closing the shell
 ---------------------------------------------------------------------------
 we don't have permission so we update the user 
 $ sudo usermod -aG docker <username>

@@ -1,0 +1,8 @@
+1. install docker
+2. start its services
+3. check for container images
+4. make container image u1 and u2 using ubuntu image separately
+5. exit them
+6. restart them
+7. run on multiple terminal to see parallel running of containers
+8.
