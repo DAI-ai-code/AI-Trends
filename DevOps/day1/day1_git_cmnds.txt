@@ -1,0 +1,152 @@
+-------------------------------DIRECTORY COMMANDS--------------------------------------
+
+$ mkdir ai-trends # makes a new folder/directory
+
+$ cd ai-trends # Moves the controller to the mentioned directory
+
+$ ls -all # all files including hidden are visible
+
+$ ls .git 
+
+-----------------------------GIT COMMANDS--------------------------------------------
+
+$ git log  # To see username and email
+
+$ git config --global user.name <u-name> # configure git to add user name as <u-name> 
+
+$ git config --global user.email <u-email> # configure git to add user email as <u-email>
+
+# we can use the above commands to override existing user name and email, use git log (above) to check existing details
+
+$ git init  # Initialize empty git repo
+
+$ git add file1 file2 # add file1 and file2 for tracking
+
+$ git add .  # adds all the file, can also use -A instead of .
+
+$ git commit -m "commit_message"
+
+$ git status # status of files of current branch
+
+$ git restore main.py # restore just previous version of main.py file
+
+$ git checkout <hash> {file} # switches to commit with <hash>. {file} optional
+
+$ git show <hash> # shows changes in commit with <hash>
+
+$ git switch -c <new_branch_name> # adding the current file/s into a new branch
+
+$ git restore --source=<hash> <file> # restore the particular file in the current branch
+
+$ git branch # list all branches in the repo
+
+$ git branch <branch_name> # creates a new branch with <branch_name>
+
+$ git checkout <branch_name> # go to the branch <branch_name>
+
+$ git merge <branch_name> # will merge <branch_name> with the current branch i.e. data from <branch_name> will be added to current branch
+
+$ git branch -M <old_branch_name> <new_branch_name> # renames branch name from <old_branch_name> to <new_branch_name>
+
+
+---------------------------------------------------------------------------
+
+# CAT basically displays content
+
+$ cat .git/HEAD # Content of head file inside .git folder 
+
+$ cat .git/config #
+
+
+
+-------------------------------------------------------------------------
+
+# Opens editor in the git bash
+
+$ vi main.py # below commands are for vi editor only
+
+# press "i" to get into insert mode
+
+# press esc to exit insert mode
+
+$ :wq # (in read mode) to save and exit
+$ :q! # (in read mode) to exit without saving
+
+
+-----------------------------------------------------------------------
+$ md5sum main.py # calculates md5 hash of the file named main.py
+
+# if changes are reverted, hash value also reverts back.
+
+
+-----------------------------------------------------------------------
+
+$ nano main.py
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
+
+$
