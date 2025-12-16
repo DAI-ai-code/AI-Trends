@@ -1,0 +1,55 @@
+-> making a docker image using dockerfile:
+#---------------------------------------#
+#inside docker file# 
+
+FROM ubuntu
+RUN mkdir /script
+COPY shell1.sh /script/
+CMD [ "/bin/bash", "/script/shell1.sh" ]
+
+#------------------------------------#
+
+$ docker build -t <your_image_name> <path>
+eg: $ docker build -t myapp1 . -> here '.' means current directory
+
+$ docker run --rm shell1 /bin/bash /script/shell1.sh
+
+$ docker run --rm myapp1 #to run the shell.sh file
+
+$ docker build -t myapp1:v1 . -> here '.' means current directory
+	        #repository:tag
+	        
+$ docker run --rm myapp:ver2.0 . -> here '.' means current directory
+
+$ chmod +x main.py -> puttin in execution mode
+
+$ docker tag <current_image_name> <your_new_name>
+eg: $ docker tag py-app1:1.0 cdac2508/py-app1:1.0
+
+$ docker login
+
+$ docker push cdac2508/py-app1:1.0
+
+$ docker logs <name_of_container>
+
+$ docker inspect <container name>
+
+--------------DOCKER NETWORK---------------------
+
+$ docker network ls
+
+$ docker network create <nw name>
+
+$ docker run --name fl1 -p 5000:5000 -d flask-app1
+
+$ docker run --name fl1 -p 5000:5000 --network flask1 -d flask-app1  -> network must exist
+
+$ docker network disconnect flask1 fl1  -> <nw name> <container name you want to disconnect>
+
+------------
+$ docker run --name jp1 -p 8000:8000 -v ~/notebooks:/tf/notebooks -d tensorflow/tensorflow:latest-image 
+  -> downloads tensorflow jupyter image and link to local ~/notebooks directory and run container jp1
+  
+$ docker logs jp1 -> show logs for container jp1, gives link of jupyter notebook for the above command
+
+

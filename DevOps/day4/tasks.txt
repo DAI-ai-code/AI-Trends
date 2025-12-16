@@ -1,0 +1,4 @@
+Creating docker image:
+1. docker commit, create a container, modify apps, copy code inside, save the container image.
+
+2. Using docker file
