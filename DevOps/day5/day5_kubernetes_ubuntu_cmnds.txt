@@ -1,0 +1,71 @@
+------------------------------------------------------------------------------------------------------------
+$ kubectl create deployment demo1 --image=cdac2508/kube-demo1:v1 --port=80 --replicas=2
+
+This command creates a Kubernetes Deployment named "demo1". 
+It uses the container image cdac2508/kube-demo1:v1 and specifies that the container exposes port 80. 
+The --replicas=2 flag instructs Kubernetes to run and maintain two identical Pods (instances) of this application 
+simultaneously. The Deployment will automatically manage these pods, 
+ensuring that if one fails, a new one is started to keep the desired state of two running replicas.
+--------------------------------------------------------------------------------------------------------------
+$ kubectl get deployment 
+
+->retrieves the list of all Deployments in the current namespace, 
+showing details like the number of desired, current, and ready pods.
+--------------------------------------------------------------------------------------------------------------
+$ kubectl get pods 
+
+-> retrieves the list of all Pods in the current namespace, showing their status, age, and other basic information.
+--------------------------------------------------------------------------------------------------------------
+$ kubectl delete svc web1
+
+-> This command deletes the Service resource named web1 from the current namespace in your Kubernetes cluster.
+--------------------------------------------------------------------------------------------------------------
+$ kubectl expose deployment demo1 --type=NodePort
+
+-> Exposes the demo1 deployment as a NodePort service.
+--------------------------------------------------------------------------------------------------------------
+$ kubectl get service
+
+->Lists all services to confirm the new service appears.
+
+--------------------------------------------------------------------------------------------------------------
+$ minikube service demo1 --url
+
+->Retrieves the full external URL for accessing the demo1 service via minikube, 
+combining the node IP and assigned NodePort.
+--------------------------------------------------------------------------------------------------------------
+$
+
+->
+--------------------------------------------------------------------------------------------------------------
+$
+
+->
+--------------------------------------------------------------------------------------------------------------
+$
+
+->
+--------------------------------------------------------------------------------------------------------------
+$
+
+->
+--------------------------------------------------------------------------------------------------------------
+$
+
+->
+--------------------------------------------------------------------------------------------------------------
+$
+
+->
+--------------------------------------------------------------------------------------------------------------
+$
+
+->
+--------------------------------------------------------------------------------------------------------------
+$
+
+->
+--------------------------------------------------------------------------------------------------------------
+$
+
+->
