@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('fetch_code') {
+            steps {
+                sh '''
+                    cd /home/ajcs/repos/new-proj
+                    git pull origin main
+                '''
+            }
+        }
+        stage('build_docker_image'){
+            steps {
+                sh '''
+                    docker build -t cdac2508/new-proj:${BUILD_NUMBER} .
+                    docker push cdac2508/new-proj:${BUILD_NUMBER}
+                '''
+            }
+        }
+        stage('update_image_minikube'){
+            steps {
+                sh '''
+                    kubectl set image deployment/new1 new-proj=cdac2508/new-proj:${BUILD_NUMBER}
+                '''
+            }
+        }
+    }
+}
